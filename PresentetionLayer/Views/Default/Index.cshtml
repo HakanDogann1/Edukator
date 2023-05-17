@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    <!--header-->
+  @await Component.InvokeAsync("_HeaderPartial")
+    <!--/header-->
+    <!--/Banner-Start-->
+  @await Component.InvokeAsync("_BannerPartial")
+    <!--//Banner-End-->
+    <!-- /bottom-grids-->
+   @await Component.InvokeAsync("_GridsPartial")
+    <!-- //bottom-grids-->
+    <!--/about-section -->
+    @await Component.InvokeAsync("_AboutPartial")
+    <!--//about-section -->
+    <!--/home-stats-->
+    @await Component.InvokeAsync("_HomePartial")
+    <!--//home-stats-->
+    <!--/popular-Courses-->
+   @await Component.InvokeAsync("_PopularCoursesPartial")
+    <!--//popular-Courses-->
+    <!--/testimonials-->
+   @await Component.InvokeAsync("_TestimonialsPartial")
+    <!-- //testimonials -->
+    <!--/subscribe-->
+   @await Html.PartialAsync("~/Views/Default/AddMailSubscribe.cshtml")
+    <!--//subscribe-->
+    <!--/footer-->
+  @await Component.InvokeAsync("_FooterPartial")
+    <!-- //footer -->
+    <!-- Js scripts -->
+    <!-- move top -->
+    @await Component.InvokeAsync("_MoveTopPartial")
+    <!-- //move top -->
+    <!-- Template JavaScript -->
+    @await Component.InvokeAsync("_ScriptPartial")
+
+</body>
+
+</html>

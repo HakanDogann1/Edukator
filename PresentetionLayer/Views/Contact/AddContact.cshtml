@@ -1,0 +1,37 @@
+﻿@model Edukator.EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "AddContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <form method="post">
+            <div class="mb-3">
+                <label for="contactnamesurname" class="form-label">Ad Soyad</label>
+                <input type="text" class="form-control" id="contactnamesurname" asp-for="NameSurname" />
+            </div>
+            <div class="mb-3">
+                <label for="contactmail" class="form-label">Mail</label>
+                <input type="text" class="form-control" id="contactmail" asp-for="Mail" />
+            </div>
+            <div class="mb-3">
+                <label for="contactphone" class="form-label">Telefon</label>
+                <input type="text" class="form-control" id="contactphone" asp-for="Phone" />
+            </div>
+            <div class="mb-3">
+                <label for="contactsubject" class="form-label">Konu</label>
+                <input type="text" class="form-control" id="contactsubject" asp-for="Subject" />
+            </div>
+            <div class="mb-3">
+                <label for="contactmessage" class="form-label">Mesaj</label>
+                <input type="text" class="form-control" id="contactmessage" asp-for="Message" />
+            </div>
+            <div>
+                <button>Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

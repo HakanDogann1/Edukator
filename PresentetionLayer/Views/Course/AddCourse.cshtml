@@ -1,0 +1,35 @@
+﻿@model Edukator.EntityLayer.Concrete.Course
+@{
+    ViewData["Title"] = "AddCourse";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <form method="post">
+            <div class="mb-3">
+                <label  class="form-label">Kurs Başlığı</label>
+                <input type="text" class="form-control" asp-for="Title" />
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Görsel Url</label>
+                <input type="text" class="form-control" asp-for="ImageUrl" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Kurs Ücreti</label>
+                <input type="text" class="form-control" asp-for="Price" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Değerlendirme</label>
+                <input type="text" class="form-control" asp-for="Review" />
+            </div>
+            <div class="mb-3">
+                <label for="coursecategory" class="form-label">Kategori</label>
+                @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.v , new {@class="form-control"})
+            </div>
+            <div>
+                <button>Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
