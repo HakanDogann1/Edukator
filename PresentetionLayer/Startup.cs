@@ -65,6 +65,8 @@ namespace PresentetionLayer
             services.AddScoped<IMailSubscribeDal,EfMailSubscribeDal>();
             services.AddScoped<IMailSubscribeService, MailSubscribeManager>();
 
+           
+
 
             services.AddControllersWithViews();
         }
