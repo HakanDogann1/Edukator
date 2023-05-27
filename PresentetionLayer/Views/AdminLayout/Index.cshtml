@@ -9,17 +9,17 @@
 @await Html.PartialAsync("PartialHead.cshtml")
 
 <body>
-   
-       
-        @await Html.PartialAsync("PartialSpinner.cshtml")
-       
-       @await Html.PartialAsync("PartialSidebar.cshtml")
+
+
+    @await Html.PartialAsync("PartialSpinner.cshtml")
+
+    @await Html.PartialAsync("PartialSidebar.cshtml")
 
         <div class="content">
-           
-            @await Html.PartialAsync("PartialNavbar.cshtml")
+
+        @await Html.PartialAsync("PartialNavbar.cshtml")
                         @RenderBody()
-            @await Html.PartialAsync("PartialFooter.cshtml")
+        @await Html.PartialAsync("PartialFooter.cshtml")
         </div>
            
            

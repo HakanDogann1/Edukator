@@ -1,0 +1,25 @@
+﻿@model List<EntityLayer.Concrete.AppUser>
+@{
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h1>Kullanıcı Listesi</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Rol Ata</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td scope="row">@count</td>
+            <td>@item.Name @item.Surname</td>
+            <td><a href="/RoleAssign/Index/@item.Id" class="btn btn-outline-warning">Rol Ata</a> </td>
+        </tr>
+    }
+</table>
+<a href="/Course/AddCourse/" class="btn btn-outline-primary" style="right:0px;">Yeni Kurs Girişi</a>
