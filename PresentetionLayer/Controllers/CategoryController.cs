@@ -1,9 +1,11 @@
 ﻿using Edukator.BusinessLayer.Abstract;
 using Edukator.EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Edukator.PresentationLayer.Controllers
 {
+    [Authorize]
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryService;

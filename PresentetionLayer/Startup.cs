@@ -8,6 +8,7 @@ using Edukator.BusinessLayer.Concrete;
 using Edukator.DataAccessLayer.Abstract;
 using Edukator.DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -65,10 +66,14 @@ namespace PresentetionLayer
             services.AddScoped<IMailSubscribeDal,EfMailSubscribeDal>();
             services.AddScoped<IMailSubscribeService, MailSubscribeManager>();
 
-           
+			services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+			 .AddCookie(opt =>
+			 {
+				 opt.LoginPath = "/Login/Index/";
+			 });
 
 
-            services.AddControllersWithViews();
+			services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
